@@ -5,11 +5,7 @@ const config = require('../config.json');
 
 var prefix = config.prefix;
 
-
 module.exports = client => {
- 
-  client.user.setActivity(`TEXT`, {
-  type: "STREAMING",
-  url: "https://www.twitch.tv/USER"  
-  });
+  client.user.setStatus("online");
+  client.user.setActivity("text", { type: "WATCHING"});
 };
